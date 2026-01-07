@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RYTHU SETU | Innovation Lab Project</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #2d5a27;
+            --light-green: #f1f8f1;
+            --accent-gold: #d4af37;
+            --text-dark: #333;
+            --text-light: #666;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: var(--primary-green);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            background: var(--light-green);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        .btn-primary {
+            background: var(--primary-green);
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Forms Section */
+        .auth-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            padding: 60px 0;
+        }
+
+        .form-card {
+            border: 1px solid #ddd;
+            padding: 30px;
+            border-radius: 8px;
+            background: #fafafa;
+        }
+
+        .form-card h3 {
+            margin-bottom: 20px;
+            color: var(--primary-green);
+            border-bottom: 2px solid var(--primary-green);
+            display: inline-block;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .badge {
+            background: #eee;
+            color: #666;
+            padding: 2px 8px;
+            font-size: 0.7rem;
+            border-radius: 10px;
+            vertical-align: middle;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: var(--primary-green);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-green);
+            background: #fff;
+            transition: transform 0.3s;
+        }
+
+        .card i {
+            font-size: 2.5rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        /* Scope Section */
+        .scope-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .scope-item {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .solving { background: #e8f5e9; border-left: 5px solid #4caf50; }
+        .not-solving { background: #fff3e0; border-left: 5px solid #ff9800; }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .auth-container, .scope-box { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav">
+        <div class="logo">RYTHU SETU</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#how-it-works">Process</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <span class="badge">Innovation Lab Concept (MVP)</span>
+        <h1>Bridging the Guidance Gap for Farmers</h1>
+        <p>Farmers lose significant yield due to delayed or complex technical advice. Rythu Setu provides a voice-first, regional language bridge to trusted agricultural decisions via WhatsApp.</p>
+        <a href="#demo" class="btn-primary">View Concept Demo</a>
+    </div>
+</section>
+
+<section class="container" id="demo">
+    <div class="auth-container">
+        <div class="form-card">
+            <h3>Login <span class="badge">Prototype</span></h3>
+            <div class="form-group">
+                <label>Mobile Number / Email</label>
+                <input type="text" placeholder="Enter credentials">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="••••••••">
+            </div>
+            <button class="btn-primary" style="width:100%">Login</button>
+        </div>
+
+        <div class="form-card">
+            <h3>Sign Up <span class="badge">Concept</span></h3>
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Farmer's Name">
+            </div>
+            <div class="form-group">
+                <label>Mobile Number</label>
+                <input type="tel" placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="form-group">
+                <label>Region / Language</label>
+                <select>
+                    <option>Select Language</option>
+                    <option>Telugu</option>
+                    <option>Hindi</option>
+                    <option>Kannada</option>
+                </select>
+            </div>
+            <button class="btn-primary" style="width:100%">Create Account</button>
+            <p style="font-size: 0.7rem; margin-top: 10px; color: #888;">* This is a non-functional UI demo for Innovation Lab evaluation.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="about" style="background: #fdfdfd;">
+    <div class="container">
+        <h2>About the Project</h2>
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p><strong>Rythu Setu</strong> was born within our Innovation Lab to address a critical friction point: the "Information-Action" gap in Indian agriculture. While information exists, it is rarely accessible in the <strong>voice-first, local language</strong> format that farmers prefer during urgent decision-making moments.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="how-it-works">
+    <div class="container">
+        <h2>How It Works</h2>
+        <div class="grid-3">
+            <div class="card">
+                <i class="fa-solid fa-microphone"></i>
+                <h4>Ask</h4>
+                <p>Farmer sends a voice note on WhatsApp describing a crop issue in their native tongue.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-gears"></i>
+                <h4>Analyze</h4>
+                <p>System assesses the urgency and provides timing guidance or risk warnings.</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h4>Escalate</h4>
+                <p>Complex or high-risk queries are routed to human experts for verified intervention.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2>MVP Scope Analysis</h2>
+        <div class="scope-box">
+            <div class="scope-item solving">
+                <h4><i class="fa-solid fa-check-circle"></i> What We Are Solving</h4>
+                <ul>
+                    <li>Reducing decision confusion during pest outbreaks.</li>
+                    <li>Providing timing guidance (When to spray/irrigate).</li>
+                    <li>Low-literacy accessible voice support.</li>
+                </ul>
+            </div>
+            <div class="scope-item not-solving">
+                <h4><i class="fa-solid fa-circle-xmark"></i> Not Solving (Future)</h4>
+                <ul>
+                    <li>Exact chemical brand/dosage prescriptions.</li>
+                    <li>End-to-end farm automation or IoT.</li>
+                    <li>E-commerce or fertilizer sales.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <div class="container">
+        <h2>Contact Us</h2>
+        <div class="form-card" style="max-width: 600px; margin: 0 auto;">
+            <p style="margin-bottom: 20px; text-align: center;"><strong>Innovation Lab:</strong> [Your Lab Name Here]<br>
+            <strong>Email:</strong> project.rythusetu@college.edu</p>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text">
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea style="width: 100%; border: 1px solid #ccc; border-radius: 4px; padding: 10px;" rows="4"></textarea>
+            </div>
+            <button class="btn-primary" style="width:100%">Send Inquiry</button>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p><strong>RYTHU SETU</strong> | Innovation Lab Project</p>
+        <p style="font-size: 0.8rem; opacity: 0.7; margin-top: 10px;">
+            Disclaimer: This project is for academic evaluation and demonstration of a concept. It is not a commercial service.
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>
